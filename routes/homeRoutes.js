@@ -3,7 +3,8 @@ const router = express.Router();
 const HomeControllersClass = require('../controllers/homeControllers')
 
 
-router.get('/', HomeControllersClass.index)
+router.get('/', HomeControllersClass.index);
+router.get('/about', HomeControllersClass.about);
 
 
 
