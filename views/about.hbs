@@ -1,0 +1,19 @@
+<h1>welcome to the about section</h1>
+
+{{#each myProfile}}
+<div>
+    <form action="/about/{{_id}}?_method=PUT" method="POST">
+        <input type="text" name="newName" id="" value="{{name}}" style="border:3px solid red ;">
+        <button type="submit">Edit</button>  
+    </form>
+    <form action="/about/{{_id}}?_method=DELETE" method="POST">
+        <button type="submit">delete</button>
+    </form>
+
+    <h1>{{email}}</h1>
+    <p>{{password}}</p>
+    <img src="{{image}}" alt="" srcset="">
+</div>
+{{/each}}
+
+<button><a href="/">back to home</a></button>
